@@ -136,17 +136,6 @@ lspci
 sudo -s
 glxinfo | grep -i opengl
 xrandr --listproviders 
-who
-ps -ef 
-kill  -9 2868
-ps -ef 
-kill  -9 2869
-ps -ef 
-ps -ef | grep :
-ps -ef | grep ':'
-ps -ef | grep ':1'
-who
-vim .local/share/xorg/Xorg.0.log.1
 sudo reboot 
 glxinfo | grep -i opengl
 glxgears 
@@ -164,18 +153,9 @@ nvidia-detect
 nvidia-settings 
 sudo -s
 cd xorg-test/
-vim install-nvidia.sh.txt
-vim /etc/apt/sources.list
-cat /etc/X11/xorg.conf 
-sudo rm /etc/X11/xorg.conf 
 cd Documents/ssh/
 ls
-
 ssh -fN -L 127.0.0.1:8443:10.2.3.1:3389 -p8443 shivadityai@118.185.178.170
-pkill ssh
-ps -ef | grep ssh
-pkill ssh-agent 
-ps -ef | grep ssh
 sudo apt install nvidia-driver
 systemctl status nvidia-persistenced.service
 apt install bumblebee-nvidia primus libgl1-nvidia-glx 
@@ -184,9 +164,6 @@ sudo -s
 ls
 glxinfo | grep OpenGL
 optirun glxinfo | grep OpenGL
-dmesg 
-q
-vim /var/log/kern.log 
 systemctl status nvidia-persistenced.service
 nvidia-settings 
 nvidia-detect 
@@ -225,37 +202,15 @@ mkdir .vim/colors
 vim .vim/colors/deus.vim
 vim .vimrc 
 vim .vim/colors/meta5.vim
-vim .vimrc 
-vim
-vim .vimrc 
-vim
-vim .vimrc 
-vim --version
 tmux
-.local/bin/powerline-daemon 
-ps -ef | grep poweline
-.local/bin/powerline-daemon -q
-vim 
-vim .vimrc 
-vim
-vim .vimrc 
-vim
-vim .vimrc 
-vim
 vim .vimrc 
 rsync -chazP .vim/* shivadityai@xenapp.mkcl.org:/home/shivadityai/.vim/
 sudo apt install rsync
 rsync -chazP .vim/* shivadityai@xenapp.mkcl.org:/home/shivadityai/.vim/
 ps -ef | grep ssh
-kill 9760 9766
-ps -ef | grep ssh
-kill 2146
-ps -ef | grep ssh
 rsync -chazP .vim/* shivadityai@xenapp.mkcl.org:/home/shivadityai/.vim/
 tar -czf .vim.tgz .vim
 scp .vim.tgz  shivadityai@xenapp.mkcl.org:/home/shivadityai/.vim/
-ps -ef | grep ssh
-kill 10265 10268
 ps -ef | grep ssh
 scp .vimrc  shivadityai@xenapp.mkcl.org:/home/shivadityai/.vim/
 vim /etc/environment
@@ -264,16 +219,8 @@ echo $HOME
 vim .bashrc 
 source .bashrc 
 vim .tmux.conf 
-tmux
-tmux ls
 tmux at
 vim .tmux.conf 
-tmux
-ps -ef | grep power
-kill 9147 
-tmux
-ps -ef | grep power
-kill 10597 
 tmux
 tmux at
 ssh-tunlmypc 
@@ -281,12 +228,8 @@ sudo netstat -ntlp
 lsmod 
 sudo apt install gimp
 sudo apt install git
-sudo add-apt-repository ppa:git-core/ppa
-sudo apt install git
-mkdir .vim
-mkdir .vim/bundle
+mkdir -p .vim/bundle
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
-pip install --user git+git://github.com/powerline/powerline
 python
 sudo apt install python3-pip
 pip3 install --user git+git://github.com/powerline/powerline
@@ -306,8 +249,6 @@ fc-cache -vf ~/.fonts
 fc-cache -vf ~/.local/share/fonts/
 vim .ssh/config
 vim .tmux.conf 
-vim powerline
-vim powerline-lint 
 vim firefox-private
 chmod +x firefox-private 
 cd ~/.config/dconf/
@@ -341,14 +282,7 @@ umount /home/me/f-drive
 vim einstein-riddle.py 
 python3 einstein-riddle.py 
 sudo vim /etc/fstab 
-mkdir e-drive f-drive -g-drive h-drive
 mkdir e-drive f-drive g-drive h-drive
-sudo vim /etc/fstab 
-mount -a
-mount /home/me/f-drive/
-sudo vim /etc/fstab 
-sudo mount -a
-sudo vim /etc/fstab 
 sudo mount -a
 sudo vim /etc/fstab 
 sudo mount -a
@@ -356,7 +290,6 @@ sudo vim /etc/fstab
 sudo mount -a
 sudo apt update
 sudo apt list --upgradable 
-sudo apt list --upgradable -a
 sudo apt upgrade 
 cd Documents/
 ls
@@ -378,15 +311,9 @@ kill 3687
 ps -ef | grep ssh
 ssh-tunlmypc 
 ssh-mypc 
-ps -ef | grep ssh
-ln -s firefox-private fp
-apt update 
-sudo apt update 
 sudo apt install firmware-misc-nonfree 
 sudo dmesg 
 sudo vim /etc/apt/sources.list.d/virtualbox.list
-sudo vim /etc/apt/sources.list.d/git-core-ubuntu-ppa-eoan.list
-sudo vim /etc/apt/sources.list
 sudo apt update
 wget -q https://www.virtualbox.org/download/oracle_vbox_2016.asc -O- | sudo apt-key add -
 wget -q https://www.virtualbox.org/download/oracle_vbox.asc -O- | sudo apt-key add -
@@ -408,6 +335,10 @@ sudo apt install apt-transport-https gnupg2 ca-certificates curl software-proper
 curl -fsSL https://download.docker.com/linux/debian/gpg | sudo apt-key add -
 sudo apt-key fingerprint 0EBFCD88
 curl -fsSL https://download.docker.com/linux/debian/gpg | sudo apt-key add -
+vim /etc/apt/sources.list.d/docker.list
+sudo vim /etc/apt/sources.list.d/docker.list
+sudo apt update
+sudo apt install docker-ce docker-ce-cli containerd.io 
 #git
 git ls-file
 git --help
@@ -429,3 +360,4 @@ git add .bash_history
 git commit -m "history file"
 git remote add origin git@github.com:shivadityaingale/dotfiles.git
 git push -u origin master
+
