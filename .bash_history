@@ -407,3 +407,8 @@ tmux
 tmux 
 apt install apt-transport-https gnupg2 
 sudo apt install apt-transport-https gnupg2 
+curl -fsSL https://download.docker.com/linux/debian/gpg | sudo apt-key add -
+sudo apt-key fingerprint 0EBFCD88
+curl -fsSL https://download.docker.com/linux/debian/gpg | sudo apt-key add -
+curl -fsSL https://download.docker.com/linux/debian/gpg 
+sudo apt install ca-certificates curl software-properties-common 
