@@ -400,15 +400,32 @@ ls
 sudo dpkg -i virtualbox-6.0_6.0.10-132072~Ubuntu~bionic_amd64.deb 
 cd
 ssh -p2222 root@localhost 
-:q
 ssh-mypc 
 timedatectl set-local-rtc 0 --adjust-system-clock 
 tmux
-tmux 
-apt install apt-transport-https gnupg2 
-sudo apt install apt-transport-https gnupg2 
+#Docker install
+sudo apt install apt-transport-https gnupg2 ca-certificates curl software-properties-common 
 curl -fsSL https://download.docker.com/linux/debian/gpg | sudo apt-key add -
 sudo apt-key fingerprint 0EBFCD88
 curl -fsSL https://download.docker.com/linux/debian/gpg | sudo apt-key add -
-curl -fsSL https://download.docker.com/linux/debian/gpg 
-sudo apt install ca-certificates curl software-properties-common 
+#git
+git ls-file
+git --help
+git ls-files
+git init
+echo "# Dot files" > README.md
+git add README.md 
+git commit .bash_history 
+git init
+echo "# Dot files" > README.md
+git add README.md 
+git status 
+git commit 
+git config --global user.email "shivadityaingale@gmail.com"
+git config --global user.name "shivaditya"
+git commit 
+git commit -m "history file"
+git add .bash_history 
+git commit -m "history file"
+git remote add origin git@github.com:shivadityaingale/dotfiles.git
+git push -u origin master
