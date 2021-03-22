@@ -115,10 +115,22 @@ fi
 PATH=$PATH:$HOME/.local/bin:$HOME/bin
 
 alias sudo='sudo -E'
-alias ssh-mypc='ssh -p8443 shivadityai@118.185.178.170'
-alias ssh-tunlmypc='ssh -fN -p8443 -L 127.0.0.1:8443:10.2.3.1:3389 shivadityai@118.185.178.170'
-alias ssh-tunl174='ssh -L 127.0.0.1:8443:10.2.3.1:3389 -p 9227 root@118.185.178.170'
 
 alias firefox-private='firefox -private-window'
+
+alias connect-ww='nmcli con up WW-client'
+alias disconnect-ww='nmcli con down WW-client'
+
+alias connect-aws='nmcli con up aws'
+alias disconnect-aws='nmcli con down aws'
+
+HISTIGNORE='&:exit:connect-ww:disconnect-ww:connect-aws:disconnect-aws:history:editenv:ssh-mypc:ssh-tunl*'
+
+PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]
+\$ '
+
+GOROOT=$HOME/go
+PATH=$PATH:$GOROOT/bin
+
 
 
